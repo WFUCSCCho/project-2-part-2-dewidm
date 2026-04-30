@@ -1,0 +1,67 @@
+I didn't give this one as much of a fair chance as the others and 'trained' (fed) two seperate ais (Gemini 3 Flash) 
+
+AI 1 was trained on first my response to project 4, then given/trained on all slides up until the time when project 2 part 2 was due, as well as full prompt and sys details.
+{{NOTE: I DISABLED LEARNING SO THAT I AM NOT TRAINING NON-LOCAL GEMINI ON YOUR SLIDES WITHOUT CONSENT}} 
+Prompt:
+(((((
+    moving way back in time to a different project that i couldn't figure out at the time, and using these slides as context of the material we were covering at the time, given this assignment prompt:
+
+
+Topics
+NVIDIA Threads Architecture
+CUDA Events
+File I/O
+Parallel Algorithm Analysis
+Background
+During class, we discussed how to implement an image blurring subroutine. We also discussed several metrics for measuring parallel algorithm performance.
+Part 2: Image Blur
+You are given a working program that blurred an image. Apply the program to several bmp images of different sizes and graph how its performance varies with system size. Modify the program using shared memory to improve its performance and compare how its performance varies with system size as compared to the original program.
+Write a brief description of the strategy you employed to improve the performance of the blur program. You will not be graded on how much your strategy improved the performance or even whether performance improved. All I am looking for here is that you gave it some thought and you were able to reason out a strategy.
+Functional Requirements
+Command Line Argument: The program must use a command line argument that corresponds to filename.
+
+Error Handling: You must check for:
+The appropriate number of command line arguments.
+Appropriate error messages must be issued for failures, followed by a graceful exit.
+Performance Analyses To analyze the relative performances of the CPU vs. GPU implementations of your image blurring algorithms, you will compute the time it takes to complete an image blurring function/kernel call.
+Hint: In the execution of your GPU implementation, for accurate timing information, you must call the kernel twice because the GPU initialization takes time that is unrelated to the algorithm.
+Project Submission
+Part 2 of your project will be submitted via GitHub and the link to your repository will be submitted on Canvas.
+Compilation: Any program that does not compile or lacks correctly constructed Makefiles will not be graded.
+Comments and Style: Significant code blocks must be commented. Use recognizable variable names and avoid acronyms. Poorly commented or difficult-to-follow code may result in a lack of assistance.
+
+
+
+And this starting code:
+
+1) blur.cu: {{Full starting code with the TODO followed by a couple extra lines of empty space}}
+
+
+
+AND a very long library 2) bitmap_image.hpp (Author: Arash Partow - 2002                                               *
+ * URL: http://partow.net/programming/bitmap/index.htm)
+{{I Did not feed it this library as it is likely already trained on it}}
+
+How do i build on the existing code to complete the assignment prompt and complete the todo tasks? Give me the full code Output/input hook file names are blurred.bmp and grumpy.bpm.
+Maintain original code structure wherever possible.
+
+
+
+)))
+
+
+
+
+AI NUMBER 2: TRAINED ON ALL OF MY PROJECT RESPONSES, ALL CLASS SLIDES, CLUSTER AND LOCAL SYSTEM DETAILS
+{{NOTE: I DISABLED LEARNING SO THAT I AM NOT TRAINING NON-LOCAL GEMINI ON YOUR SLIDES WITHOUT CONSENT}}
+
+PROMPT:
+does this code: (Full generated code from ai 1)
+
+1.) work in cluster, and 2) fulfill this prompt:
+
+(ASSIGNMENT PROMPT)
+
+
+Additionally, Generate a makefile with an additional added command to make it run locally. Include a comment outlining 
+nvcc -allow-unsupported-compiler -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64" blur.cu -o blur.exe 
